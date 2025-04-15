@@ -5,37 +5,43 @@ import './index.css';
 const teamMembers = [
   {
     name: "Ahmad Baker",
+    title: "Project Manager",
     linkedin: "https://www.linkedin.com/in/ahmadbaker/",
     image: "/ahmadresized4.png",
   },
   {
     name: "Zaid Ahmad",
+    title: "Fullstack Developer",
     linkedin: "https://www.linkedin.com/in/zaidahmad25/",
     image: "/zaidsresized.jpg",
   },
   {
     name: "Rameez Ahmed",
+    title: "Frontend Developer",
     linkedin: "https://www.linkedin.com/in/rameez-ahmed-3a4462286/?originalSubdomain=ca",
     image: "/rameezresized.jpg",
   },
   {
     name: "Samuel Anowai",
+    title: "Backend Developer",
     linkedin: "https://www.linkedin.com/in/s-anowai/",
     image: "/sammresized.jpg",
   },
   {
     name: "Aisha Naeem",
+    title: "Frontend Developer",
     linkedin: "https://ca.linkedin.com/in/aisha-naeem-67b2922a3",
     image: "/aisharesized.jpg",
   },
   {
     name: "Reanna Bari",
+    title: "Backend Developer",
     linkedin: "https://ca.linkedin.com/in/reanna-bari-5a0344233",
     image: "/uknownresized.jpg",
   },
 ];
 
-const TeamCard = ({ name, linkedin, image }) => (
+const TeamCard = ({ name, title, linkedin, image }) => (
   <div className="bg-gradient-to-br from-green-50 to-green-100 text-green-900 p-6 rounded-[60%_40%_60%_40%/50%_60%_40%_50%] shadow-md hover:shadow-xl transition-all duration-300 w-full max-w-xs text-center transform hover:-translate-y-1 hover:rotate-1">
     <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-green-700 mx-auto mb-4 shadow-inner">
       <img
@@ -45,6 +51,7 @@ const TeamCard = ({ name, linkedin, image }) => (
       />
     </div>
     <h2 className="text-xl font-semibold mb-1">{name}</h2>
+    <p className="text-sm text-green-800 italic mb-2">{title}</p>
     <a
       href={linkedin}
       target="_blank"
